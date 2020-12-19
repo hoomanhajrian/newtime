@@ -43,11 +43,11 @@ const printer = ()=>{
     const totalPassedMino = totalPassedSeko /50;
     // Ora, Mino, Seko
     
-    const Ora = totalPassedMino/100;
-    const Mino =   ((Ora) - (Math.floor(Ora)))*100;
-    const Seko =  ((Ora) - (Math.floor(Ora)))*150;
-
-    time.innerHTML = `${Math.floor(Ora)}<span>:</span>${Math.floor(Mino)}<span>:</span>${Math.floor(Seko)}`;
+    const currentOra = totalPassedMino/100;
+    const currentMino =   ((currentOra) - (Math.floor(currentOra)))*100;
+    const currentSeko =  ((totalPassedSeko.toFixed(0)/100 - Math.trunc(totalPassedSeko.toFixed(0)/100))*100).toFixed(0);
+    
+    time.innerHTML = `${Math.floor(currentOra)}<span class="animated">:</span>${Math.floor(currentMino)}<span class="animated">:</span>${currentSeko}`;
 };
 
-setInterval(printer,1000);
+setInterval(printer,0960);
