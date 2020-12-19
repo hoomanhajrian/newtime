@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
 body{
     background-color: gray;
-    max-width: 100%;
-    width: 100%;
 }
 #time{
     text-align: center;
-    /* font-size: 3rem; */
+    margin-top: 40vh;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+    color: blue;
+    
+    font-family: 'Rajdhani',georgia,sans-serif;
+}
+#time span{
+    color:red;
 }

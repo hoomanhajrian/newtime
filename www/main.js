@@ -30,7 +30,7 @@ const printer = ()=>{
         
 
     // const SEKO = Math.ceil((Date.now()/960));
-    time.innerHTML = `${Math.ceil(Ora)}:${Math.ceil(Mino)}:${Math.ceil(Sako)}`;
+    time.innerHTML = `${Math.ceil(Ora)}<span>:</span>${Math.ceil(Mino)}<span>:</span>${Math.ceil(Sako)}`;
 };
 
 setInterval(printer,1000);
