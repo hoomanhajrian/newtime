@@ -1,17 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
 body{
-    background-color: gray;
+    background-image: linear-gradient( #22c1c3, #2a8ec2, #2e71c2, #3258c2, #3737c1);
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 #time{
     text-align: center;
-    margin-top: 40vh;
+    margin-top: 30vh;
     width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;   
-    color: blue;
-    
+    color: rgb(124, 218, 218);
     font-family: 'Rajdhani',georgia,sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+    letter-spacing: .5rem;
+}
+h1{
+    color: orangered;
+    font-family: 'Rajdhani',georgia,sans-serif;
+    text-align: center;
+    margin-top: 10vh;
 }
 #time span{
     color:red;
