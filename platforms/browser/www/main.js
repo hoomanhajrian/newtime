@@ -45,9 +45,9 @@ const printer = ()=>{
     
     const currentOra = totalPassedMino/100;
     const currentMino =   ((currentOra) - (Math.floor(currentOra)))*100;
-    const currentSeko =  ((totalPassedSeko.toFixed(0)/100 - Math.trunc(totalPassedSeko.toFixed(0)/100))*100).toFixed(0);
+    const currentSeko =  ((totalPassedSeko.toFixed(0)/100 - Math.trunc(totalPassedSeko.toFixed(0)/100))*50).toFixed(0);
     
     time.innerHTML = `${Math.floor(currentOra)}<span class="animated">:</span>${Math.floor(currentMino)}<span class="animated">:</span>${currentSeko}`;
 };
 
-setInterval(printer,0960);
+setInterval(printer,1000);
