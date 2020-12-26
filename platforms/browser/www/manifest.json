@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Blank App",
-  "short_name": "Blank App",
-  "version": "com.phonegap.blank",
-  "description": "A blank PhoneGap app.",
-  "author": "PhoneGap Team",
+  "name": "HelloCordova",
+  "short_name": "HelloCordova",
+  "version": "io.cordova.hellocordova",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "author": "Apache Cordova Team",
   "icons": [],
   "start_url": "index.html"
 }
