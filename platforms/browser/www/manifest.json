@@ -1,11 +1,17 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "HelloCordova",
-  "short_name": "HelloCordova",
+  "name": "newTime",
+  "short_name": "newTime",
   "version": "io.cordova.hellocordova",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
-  "icons": [],
+  "description": "Cordova app debuged for android about a new way of time devisions and showing it",
+  "author": "Hoomi",
+  "icons": [
+    {
+      "src": "./res/android/icon.png",
+      "type": "image/png",
+      "sizes": "57x57"
+    }
+  ],
   "start_url": "index.html"
 }
