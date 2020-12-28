@@ -7,7 +7,7 @@ const dato = document.getElementById("dato");
 // const newTime = {
 // DATE:{
 //     // Number of day
-//         weekNum:"",
+//         weekNum:36,
         
 //         dayNumber:"1,2,3,4,5,6,7,8,9,10",
 // },
@@ -39,7 +39,7 @@ const timeConverter = ()=>{
     // total passed seconds in a day
     const totalPassedSeconds = hours*3600 + minutes*60 + seconds;
     // converting total passed seconds to SEKO in 24 hours
-    // each Seko is 0.96 seconds.
+    // each Seko is 0.96 second.
     const totalPassedSeko = totalPassedSeconds / 0.96;
     // it updates every 100 seconds
     const totalPassedBiMino = totalPassedSeko /100;
@@ -48,10 +48,17 @@ const timeConverter = ()=>{
     const currentBiOra = totalPassedBiMino/100;
     const currentBiMino =  (currentBiOra - Math.floor(currentBiOra))*100;
     const currentSeko = ((totalPassedSeko)/100 - Math.floor(totalPassedSeko/100))*100;
-  
+    function sekoMinoPrinter(x){
+      if (x<10){
+        return `0${x}`;
+      }
+      else if (x>=10){
+        return `${x}`;
+      }
+    };
 
     
-    time.innerHTML = `<span class="ora">${Math.floor(currentBiOra)}</span><span class="mino">${Math.floor(currentBiMino)}</span><span class="seko">${Math.floor(currentSeko)}</span>`;
+    time.innerHTML = `<span class="ora">${Math.floor(currentBiOra)}</span><span class="mino">${sekoMinoPrinter(Math.floor(currentBiMino))}</span><span class="seko">${sekoMinoPrinter((Math.floor(currentSeko)))}</span>`;
 
     // calculating DATO
 
