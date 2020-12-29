@@ -1,3 +1,10 @@
+/* Your app styles here */
+.ios .tabbar-labels .tab-link:not(.tab-link-active) .icon-ios-fill {
+  display: none;
+}
+.ios .tabbar-labels .tab-link.tab-link-active .icon:not(.icon-ios-fill) {
+  display: none;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
@@ -5,7 +12,6 @@
 body{
     background-image: linear-gradient( #22c1c3, #2a8ec2, #2e71c2, #3258c2, #3737c1);
     background-repeat: no-repeat;
-    height: 100vh;
     font-size: 16px;
 }
 #time,#dato{
@@ -26,14 +32,19 @@ h1,h2{
     font-weight: bold;
 }
 .ora{
-    font-size: 5rem;
+    font-size: 3rem;
 }
 .mino{
-    font-size: 4rem;
+    font-size: 2rem;
 }
 .seko{
-    font-size: 2rem;
+    font-size: 1rem;
 }
 .week{
     font-size: 5rem;
+}
+.times{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
 }
