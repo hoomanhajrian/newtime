@@ -19,12 +19,16 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
   <title>My App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Headland+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Headland+One&family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="framework7/css/framework7.min.css">
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body class="color-theme-gray">
   <div id="app">
     <!-- Views/Tabs container -->
     <div class="views tabs ios-edges">
@@ -66,25 +70,25 @@
           <!-- Scrollable page content-->
           <div class="page-content">
             <div class="block block-strong">
-              <p>You can compare the new time with the current time we are using with the help of this clock</p>
+              <p>You can compare the new time with the current time we are using with the help of this application</p>
               <p>For more information about how this time is working visit the about tab</p>
             </div>
             <div class="times">
-              <div id="newTime">
+              <div class="time colorfull">
                 <h1>New Time</h1>
                 <div id="time">Loading...</div>
               </div>
-              <div class="oldTime">
+              <div class="oldTime colorfull">
                 <h1>Current Time</h1>
-                <div id="oldTime">2:54:23</div>
+                <div id="oldTime">loading...</div>
               </div>
-              <div class="dato">
+              <div class="dato colorfull">
                 <h2>DATO</h2>
                 <div id="dato">Loading...</div>
             </div>
-              <div class="old-date">
-              <h2>DATE</h2>
-              <div id="date">23/Jan/2021</div>
+              <div class="old-date colorfull">
+              <h2>Current Date</h2>
+              <div id="date">Loading...</div>
               </div>   
             </div>
           </div>

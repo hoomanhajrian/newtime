@@ -3,6 +3,11 @@
 
 const time = document.getElementById("time");
 const dato = document.getElementById("dato");
+const oldTime = document.getElementById("oldTime");
+const oldDate = document.getElementById("date");
+// date.getTime() returns the milliseconds since the invention of it, in java script.
+const date = new Date();
+
 
 // const newTime = {
 // DATE:{
@@ -30,8 +35,7 @@ function days_passed(date) {
 
 
 const timeConverter = ()=>{
-    // date.getTime() returns the milliseconds since the invention of it, in java script.
-    const date = new Date();
+    
     // defining hours minutes and seconds;
     const hours = date.getHours();
     const minutes = date.getMinutes();
@@ -62,7 +66,12 @@ const timeConverter = ()=>{
 
     // calculating DATO
 
-    dato.innerHTML = `<span class="week">${Math.floor(days_passed(date)/10)}</span><span>${days_passed(date) - Math.floor(days_passed(date)/10)*10}</span>`;
+    dato.innerHTML = `<span class="week">${Math.floor(days_passed(date)/10)}</span><span>${days_passed(date) - Math.floor(days_passed(date)/10)*10}</span>`;   
+};
+const timer = () => {
+  oldDate.innerHTML = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+  oldTime.innerHTML = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 };
 
+setInterval(timer,1000);
 setInterval(timeConverter,0960);
