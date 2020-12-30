@@ -1,5 +1,5 @@
 {
-  "name": "io.cordova.hellocordova",
+  "name": "io.cordova.newtime",
   "displayName": "newTime",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
@@ -14,6 +14,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^9.0.0",
+    "cordova-browser": "^6.0.0",
     "cordova-plugin-whitelist": "^1.3.4"
   },
   "cordova": {
@@ -21,6 +22,7 @@
       "cordova-plugin-whitelist": {}
     },
     "platforms": [
+      "browser",
       "android"
     ]
   }

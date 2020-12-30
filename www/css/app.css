@@ -34,22 +34,21 @@ h1,h2{
     font-weight: 400;
 }
 .ora{
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .mino{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .seko{
-    font-size: 1rem;
+    font-size: .75rem;
 }
 .week{
-    font-size: 5rem;
+    font-size: 3rem;
 }
 .times{
-    grid-gap: .5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  padding:.5rem;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 1rem;
 }
 #date,#oldTime{
     text-align: center;

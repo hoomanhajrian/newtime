@@ -3,7 +3,7 @@ const time = document.getElementById("time");
 const dato = document.getElementById("dato");
 const oldTime = document.getElementById("oldTime");
 const oldDate = document.getElementById("date");
-
+const sekoElement = document.getElementsByClassName("seko");
 // function to get the passed days from an start date
 function days_passed() {
   // date.getTime() returns the milliseconds since the invention of it, in java script.
@@ -43,7 +43,7 @@ const date = new Date();
         return `${x}`;
       }
     };
-    
+  
     time.innerHTML = `<span class="ora">${Math.floor(currentBiOra)}</span><span class="mino">${sekoMinoPrinter(Math.floor(currentBiMino))}</span><span class="seko">${sekoMinoPrinter((Math.floor(currentSeko)))}</span>`;
 
     dato.innerHTML = `<span class="week">${Math.floor(days_passed(date)/10)}</span><span>${days_passed(date) - Math.floor(days_passed(date)/10)*10}</span>`;   
@@ -57,3 +57,4 @@ const date = new Date();
 
 setInterval(timer,1000);
 setInterval(timeConverter,0960);
+
