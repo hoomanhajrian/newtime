@@ -12,7 +12,7 @@
     text-align: center;
     color: #1015;
     font-family: 'Nunito', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 1rem;
     letter-spacing: .5rem;
 }
@@ -58,4 +58,31 @@ h1,h2{
 .colorfull{
     border: 1px solid black;
     box-shadow: 7px 4px rgba(0,0, 0, .1);
+}
+
+#weekDays{
+    width:40%;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 1rem;
+}
+label{
+    text-align: center;
+    display: block;
+}
+#calendar_table{
+    max-width: 100%;
+    width:80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#calendar_table td{
+    border:1px solid black;
+}
+#calendar_button{
+    width:20%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.5rem;
 }

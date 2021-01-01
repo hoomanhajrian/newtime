@@ -100,4 +100,40 @@ app.on('pageInit',()=>{
   setInterval(timer,1000);
   setInterval(timeConverter,0960);
   
+// calendar functions
+
+const weekDays = document.getElementById("weekDays");
+const calendarButton = document.getElementById("calendar_button");
+
+function dayMaker(){
+days = [];
+for(i=1;i<=360;i++){
+  days.push(i);
+  };
+  return days;
+};
+
+
+function calendarCreate(x){
+  const calendar = document.getElementById("calendar_table");
+  let cal = dayMaker();
+  console.log(cal);
+};
+
+
+
+calendarButton.addEventListener("click",()=>{
+  let numberOfRows = 360/weekDays.value;
+  calendarCreate(numberOfRows);
+});
+
+
+ 
+// row = calendar.insertRow(0);
+// const cell1 = row.insertCell(0);
+// const cell2 = row.insertCell(1);
+
+// cell1.innerHTML = 'hi';
+// cell2.innerHTML = 'bye';
+
 });
