@@ -9,14 +9,7 @@ var app  = new Framework7({
   theme: 'auto', // Automatic theme detection
   // App root data
   data: function () {
-    return {
-      data: function () {
-        return {
-          title: 'Component Page',
-          names: ['John', 'Vladimir', 'Timo'],
-        }
-      },
-    };
+    
   },
   // App root methods
   methods: {
@@ -99,41 +92,57 @@ app.on('pageInit',()=>{
   
   setInterval(timer,1000);
   setInterval(timeConverter,0960);
-  
-// calendar functions
 
-const weekDays = document.getElementById("weekDays");
-const calendarButton = document.getElementById("calendar_button");
-
-function dayMaker(){
-days = [];
-for(i=1;i<=360;i++){
-  days.push(i);
-  };
-  return days;
-};
-
-
-function calendarCreate(x){
-  const calendar = document.getElementById("calendar_table");
-  let cal = dayMaker();
-  console.log(cal);
-};
-
-
-
-calendarButton.addEventListener("click",()=>{
-  let numberOfRows = 360/weekDays.value;
-  calendarCreate(numberOfRows);
 });
 
 
- 
-// row = calendar.insertRow(0);
-// const cell1 = row.insertCell(0);
-// const cell2 = row.insertCell(1);
+app.once('pageInit',()=>{
+  
+  const calendar = document.getElementById("calendar");
+  const calendarButton = document.getElementById("calendar_button");
+  days = [];
+  
+  
+    function calendarCreate(){
+      calendar.innerHTML = ``;
+      for(i=1;i<=360;i++){
+        days.push(i);
+        };
+      days.forEach(e=>{
+            calendar.innerHTML += `<div class="days day${e}">${e}<div>`;
+      });
+    };
+      
 
-// cell1.innerHTML = 'hi';
-// cell2.innerHTML = 'bye';
+  calendarButton.addEventListener("click",()=>{
+    days = [];
+    calendar.innerHTML = "";
+    let weekDays = document.getElementById("weekDays").value;
 
+      if(weekDays==1){
+          calendar.style.gridTemplateColumns = "1fr";
+       }
+      else if(weekDays==2){
+          calendar.style.gridTemplateColumns = "1fr 1fr";
+      }
+      else if(weekDays==4){
+        calendar.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
+      }
+      else if(weekDays==6){
+        calendar.style.gridTemplateColumns = "repeat(6,1fr)";
+      }
+      else if(weekDays==8){
+        calendar.style.gridTemplateColumns = "repeat(8,1fr)";
+      }
+      else if(weekDays==9){
+        calendar.style.gridTemplateColumns = "repeat(9,1fr)";
+      }
+      else if(weekDays==10){
+        calendar.style.gridTemplateColumns = "repeat(10,1fr)";
+      }
+      else if(weekDays==15){
+        calendar.style.gridTemplateColumns = "repeat(15,1fr)";
+      }
+    calendarCreate();
+  });
 });

@@ -66,23 +66,30 @@ h1,h2{
     margin-left:auto;
     margin-top: 1rem;
 }
+
 label{
     text-align: center;
     display: block;
 }
-#calendar_table{
+
+#calendar{
     max-width: 100%;
+    display: grid;
     width:80%;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 1rem;
 }
-#calendar_table td{
-    border:1px solid black;
-}
+
 #calendar_button{
-    width:20%;
+    width:30%;
     display: block;
     margin-right: auto;
     margin-left: auto;
     margin-top: 0.5rem;
+}
+
+.days{
+    display: inline;
+    border: 1px solid blue;
 }
